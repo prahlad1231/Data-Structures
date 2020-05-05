@@ -256,6 +256,11 @@ public class BinarySearchTree <T extends Comparable<T>> {
                 if (node.right != null) queue.offer(node.right);
                 return node.data;
             }
+            
+            @Override
+            public void remove() {
+                throw new UnsupportedOperationException();
+            }
         };
     }
 
