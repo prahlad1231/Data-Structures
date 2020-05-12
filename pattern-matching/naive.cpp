@@ -1,6 +1,6 @@
 /*
 	Naive implementation of pattern matching
-	Worst case time complexity: O(m+(n-m+1)), where n = length of text, m = length of pattern
+	Worst case time complexity: O((n-m)m), where n = length of text, m = length of pattern
 	
 	@author Er. Prahlad Panthi
 	May 11, 2020
@@ -19,7 +19,7 @@ int main() {
 	char pattern[] = "Apple";
 	vector<int> index = naiveSearch(text, pattern, strlen(text), strlen(pattern));
 	if (index.empty()) {
-		cout << "Not found\n";
+		cout << "Not found\n"; 
 	} else {
 		cout << "Found in index: ";
 		for (int i = 0; i < index.size(); ++i) {
