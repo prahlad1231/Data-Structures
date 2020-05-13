@@ -1,5 +1,6 @@
 /*
 	Knuth-Morris-Pratt (KMP) Pattern Matching algorithm
+	Time complexity: O(m+n), where m = length of text, n = length of pattern
 
 	@author: Er. Prahlad Panthi
 	May 12, 2020
@@ -16,7 +17,7 @@ vector<int> kmp(char*, char*, int*, int, int);
 
 int main() {
 	char text[] = "This is a sample. This sample is not good. I will make this sample good.";
-	char pattern[] = "sample";
+	char pattern[] = "This";
 	int len = strlen(pattern);
 	int arr[len];
 	vector<int> index = kmp(text, pattern, arr, strlen(text), len);
